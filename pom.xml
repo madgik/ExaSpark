@@ -33,11 +33,7 @@
 	            <configuration>
 	                <archive>
 	                    <manifest>
-<<<<<<< HEAD
 	                        <mainClass>madgik.mySpark.ExaremeSpark</mainClass>
-=======
-	                        <mainClass>madgik.mySpark.VtParser</mainClass>
->>>>>>> 375dcf554fd703ef83c841f6ccbafad68c66f990
 	                    </manifest>
 	                </archive>
 	            </configuration>
@@ -57,11 +53,7 @@
 		        <configuration>
 		        	<archive>
 	                    <manifest>
-<<<<<<< HEAD
 	                        <mainClass>madgik.mySpark.ExaremeSpark</mainClass>
-=======
-	                        <mainClass>madgik.mySpark.VtParser</mainClass>
->>>>>>> 375dcf554fd703ef83c841f6ccbafad68c66f990
 	                    </manifest>
 	                </archive>
 		          <descriptorRefs>

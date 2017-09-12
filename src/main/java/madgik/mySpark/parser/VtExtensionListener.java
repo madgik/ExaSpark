@@ -103,7 +103,6 @@ public class VtExtensionListener extends SqlBaseBaseListener{
 		boolean correctArgs = false;
 		
 		try {
-<<<<<<< HEAD
 			
 			ClassLoader classLoader = VtExtensionListener.class.getClassLoader();
 			Class<?> cls = classLoader.loadClass(clName);
@@ -111,12 +110,6 @@ public class VtExtensionListener extends SqlBaseBaseListener{
 			Class sparkParam[] = {SparkSession.class};
 			
 			Object paramsObj[] = {};
-=======
-			Class sparkParam[] = {SparkSession.class};
-			
-			Object paramsObj[] = {};
-			Class<?> cls = Class.forName(clName);
->>>>>>> 375dcf554fd703ef83c841f6ccbafad68c66f990
 			
 			Class[] paramString = new Class[tvfArgs.size()];
 			

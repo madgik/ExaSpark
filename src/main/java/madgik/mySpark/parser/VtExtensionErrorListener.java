@@ -23,7 +23,11 @@ public class VtExtensionErrorListener extends BaseErrorListener{
 							RecognitionException e)
 	{
 		
+<<<<<<< HEAD
 		System.out.println(ParserUtils.displayError(ParserUtils.getErrorMessage(this.query, msg, line, charPositionInLine)));
+=======
+		System.out.println(ParserUtils.getErrorMessage(this.query, msg, line, charPositionInLine));
+>>>>>>> 375dcf554fd703ef83c841f6ccbafad68c66f990
 		
 	}
 

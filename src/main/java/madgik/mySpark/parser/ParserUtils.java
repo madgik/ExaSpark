@@ -56,6 +56,7 @@ public final class ParserUtils {
 		return capitalizedQuery.toString();
 		
 	}
+<<<<<<< HEAD
 	
 	public static String displayError(String message) {
 		
@@ -66,5 +67,7 @@ public final class ParserUtils {
 		
 		return error.toString();
 	}
+=======
+>>>>>>> 375dcf554fd703ef83c841f6ccbafad68c66f990
 
 }

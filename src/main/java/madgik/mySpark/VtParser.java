@@ -58,12 +58,6 @@ public class VtParser {
 	public Dataset<Row> parseAndEvaluate() throws VtExtensionParserException{
 		try{
 			
-//			String query = "SELECT * FROM DOO(',',(SELECT * FROM KOO(',','/home/ethimis/Desktop/people.txt')),(SELECT * FROM BOO(',',(SELECT * FROM FOO(',','/home/ethimis/Desktop/people.txt')))))";
-			
-//			String query = "SELECT * FROM BOO(',',(SELECT * FROM FOO(',','/home/ethimis/Desktop/people.txt')))";
-
-//			String query = "SELECT * FROM FOO(',','/home/ethimis/Desktop/people.txt')";
-			
 			String capitalizedQuery = ParserUtils.capitalizeQuery(this.query);
 			
 			ANTLRInputStream input = new ANTLRInputStream(new ByteArrayInputStream(capitalizedQuery.getBytes()));

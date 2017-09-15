@@ -1,5 +1,12 @@
 package madgik.mySpark.parser;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+
 public final class ParserUtils {
 	
 	public static String retrimWhitespaces(String sql) {
@@ -65,6 +72,15 @@ public final class ParserUtils {
 			 .append("\n-------------------------------------------------\n");
 		
 		return error.toString();
+	}
+	
+	public static boolean checkIfShowVt(String query) {
+		
+		if(query.toLowerCase().equals("show virtual tables"))
+			return true;
+		else
+			return false;
+		
 	}
 
 }

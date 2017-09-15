@@ -107,17 +107,13 @@ public class VtParser {
 				capitalizedQuery = capitalizedQuery.replace(entry.getKey(), entry.getValue());
 			}
 			
-//			System.out.println("MAP:: "+listen.getVtToViews());
-//			System.out.println("QUERY:: "+query);
-			
 			LogicalPlan lgk = spark.sessionState().sqlParser().parsePlan(capitalizedQuery);
 			QueryExecution qe = spark.sessionState().executePlan(lgk);
 			qe.assertAnalyzed();
-//			spark.sql("SHOW TABLES").show();
 			
 			return Dataset.ofRows(spark, lgk);
 		
-		}catch (ParseCancellationException | RecognitionException | IOException e)
+		}catch (ParseCancellationException | RecognitionException | IOException  e)
         {
 			if(e.getMessage() != null){
 //				System.out.println(ParserUtils.displayError(e.getMessage()));

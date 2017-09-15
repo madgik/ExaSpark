@@ -45,7 +45,9 @@ public class VtExtensionListener extends SqlBaseBaseListener{
 		
 		if(!vts.contains(ctx.getText())){
 			vts.add(ctx.getText());
+			
 			estimateArgs(ctx);
+			
 		}
 		
 	}
@@ -86,7 +88,6 @@ public class VtExtensionListener extends SqlBaseBaseListener{
 				
 				tvfArgs.add(spark.sql(sqlExpression).toDF());
 				tvfArgsTypes.add(1);
-//				tvfArgs.add(ctx.expression().get(expr).getText().replaceAll("'", ""));
 			}else{
 				tvfArgs.add(ctx.expression().get(expr).getText().replaceAll("'", ""));
 				tvfArgsTypes.add(0);
@@ -107,11 +108,9 @@ public class VtExtensionListener extends SqlBaseBaseListener{
 			ClassLoader classLoader = VtExtensionListener.class.getClassLoader();
 			Class<?> cls = classLoader.loadClass(clName);
 			//----------------------------------------------------
-			Class sparkParam[] = {SparkSession.class};
+			Class<?> sparkParam[] = {SparkSession.class};
 			
-			Object paramsObj[] = {};
-			
-			Class[] paramString = new Class[tvfArgs.size()];
+			Class<?>[] paramString = new Class[tvfArgs.size()];
 			
 			for(int i=0; i<tvfArgs.size(); ++i){
 				if(tvfArgsTypes.get(i) == 0){

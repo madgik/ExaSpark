@@ -34,7 +34,7 @@ public class Sample implements ExaremeVtFunction{
 	@Override
 	public String mapReduce(SparkSession spark) {
 		long count = dataset.count();
-		dataset.sample(true, 1.0*this.numOfRecords/count).createOrReplaceTempView("sample");
+		dataset.sample(false, 5.0*this.numOfRecords/count).limit(numOfRecords).createOrReplaceTempView("sample");
 
 		return "sample";
 		

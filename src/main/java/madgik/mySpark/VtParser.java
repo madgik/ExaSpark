@@ -116,7 +116,6 @@ public class VtParser {
 		}catch (ParseCancellationException | RecognitionException | IOException  e)
         {
 			if(e.getMessage() != null){
-//				System.out.println(ParserUtils.displayError(e.getMessage()));
 				throw new VtExtensionParserException(e.getMessage());
 			}else {
 				throw new VtExtensionParserException(null);

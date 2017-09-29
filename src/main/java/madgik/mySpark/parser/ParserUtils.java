@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
+import madgik.mySpark.console.Console;
+
 public final class ParserUtils {
 	
 	public static String retrimWhitespaces(String sql) {
@@ -67,7 +69,7 @@ public final class ParserUtils {
 	public static String displayError(String message) {
 		
 		StringBuilder error = new StringBuilder();
-		error.append("\n----------------------ERROR----------------------\n")
+		error.append("\n----------------------"+Console.ANSI_BOLD+Console.ANSI_BRIGHT_RED+"ERROR"+Console.ANSI_RESET+"----------------------\n")
 			 .append("\n"+message+"\n")
 			 .append("\n-------------------------------------------------\n");
 		

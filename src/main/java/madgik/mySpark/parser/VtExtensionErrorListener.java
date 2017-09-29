@@ -4,6 +4,8 @@ import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 
+import madgik.mySpark.console.Console;
+
 public class VtExtensionErrorListener extends BaseErrorListener{
 
 	private String query;
@@ -23,7 +25,7 @@ public class VtExtensionErrorListener extends BaseErrorListener{
 							RecognitionException e)
 	{
 		
-		System.out.println(ParserUtils.displayError(ParserUtils.getErrorMessage(this.query, msg, line, charPositionInLine)));
+		Console.printMessage(ParserUtils.displayError(ParserUtils.getErrorMessage(this.query, msg, line, charPositionInLine)));
 		
 	}
 

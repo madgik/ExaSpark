@@ -48,7 +48,13 @@ Returns a random sample_size set of rows.
 $ select * from sample(HowMany,(select * from apachelogsplit('/path/of/access_log')))
 ```
 
+### New feautures
+- Improved console (auto-complete, command history, new design)
+- ReservedWords.txt file contains reserved-sql words for auto-complete method
+- "show virtual tables" has been included
+
 ### Upcoming features
 
-- Register virtual tables while the app is running
+- Show execution time of query
+- Help command on console
 

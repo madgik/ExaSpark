@@ -76,6 +76,15 @@ public final class ParserUtils {
 		return error.toString();
 	}
 	
+	public static boolean checkIfSelectQuery(String query) {
+		
+		if(query.toLowerCase().contains("select"))
+			return true;
+		else
+			return false;
+		
+	}
+	
 	public static boolean checkIfShowVt(String query) {
 		
 		if(query.toLowerCase().equals("show virtual tables"))

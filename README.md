@@ -51,7 +51,8 @@ $ select * from sample(HowMany,(select * from apachelogsplit('/path/of/access_lo
 ### New feautures
 - Improved console (auto-complete, command history, new design)
 - ReservedWords.txt file contains reserved-sql words for auto-complete method
-- "show virtual tables" has been included
+- "show virtual tables" command has been included
+- ExaremeSparkSession (extension of SparkSession) has been included, so as to support sql queries with virtual tables without console
 
 ### Upcoming features
 

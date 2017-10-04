@@ -50,12 +50,16 @@ public final class Console {
 			Console.printMessage(ParserUtils.displayError(e1.getMessage()));
 		}
 		
+		spark.stop();
+		
 		return LineReaderBuilder
 					.builder()
 					.history(new DefaultHistory())
 					.completer(comp)
 					.appName("exaremeSql")
 					.build();
+		
+		
 		
 	}
 }

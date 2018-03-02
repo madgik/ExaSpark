@@ -1,6 +1,6 @@
-# Exareme Spark
+# ExaSpark
 
-Exareme Spark is an extension of Apache Spark, which supports virtual tables. Furthermore, user-defined functions and user-defined aggregate functions are supported already from Apache Spark. 
+ExaSpark is an extension of Apache Spark, which supports virtual tables. Furthermore, user-defined functions and user-defined aggregate functions are supported already from Apache Spark. 
 
 ### How to register a virtual table
 

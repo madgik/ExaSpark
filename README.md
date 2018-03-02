@@ -10,7 +10,7 @@ ExaSpark is an extension of Apache Spark, which supports virtual tables. Further
 
 
 Finally:
-  - This java class should be placed to madgik/mySpark/vtFunctions
+  - This java class should be placed to madgik/exaSpark/vtFunctions
 
 ### How to run the application on terminal
 
@@ -23,7 +23,7 @@ Finally:
 
 **Example**
 
-There are some vtable functions in the path **/madgik/mySpark/vtFunctions** so as to test the application or write your own based on them.
+There are some vtable functions in the path **/madgik/exaSpark/vtFunctions** so as to test the application or write your own based on them.
 
 ```sh
 $ SELECT * FROM FOO(',','/pathOfFile.txt')

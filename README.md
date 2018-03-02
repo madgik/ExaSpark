@@ -48,14 +48,36 @@ Returns a random sample_size set of rows.
 $ select * from sample(HowMany,(select * from apachelogsplit('/path/of/access_log')))
 ```
 
-### New feautures
+### Feautures
 - Improved console (auto-complete, command history, new design)
 - ReservedWords.txt file contains reserved-sql words for auto-complete method
 - "show virtual tables" command has been included
 - ExaremeSparkSession (extension of SparkSession) has been included, so as to support sql queries with virtual tables without console
 
+### New Feautures
+**Rest api**
+
+Through our REST API a user is able to:
+- submit queries
+
+Settings A POST request is used to perform the functionality
+- ExaSpark Rest API listens on port 9090 (can be configured from application.properties file
+- Declare the Accept request HTTP header to: 
+    - application/json (for json responses)
+    - text.csv (for csv responses)
+- Every request should contain a form with the following value:
+    - query : the ExaDSpark query 
+
+**Swagger UI**
+
+Visualization and interactaction with the API’s resources
+
+
+**Endpoints**
+
+- http://<ip>:9090/query/ : to perform a query
+- http://<ip>:9090/swagger-ui.html : to visualize the API's resources
+
 ### Upcoming features
 
-- Show execution time of query
-- Help command on console
-
+- Dockerize the application

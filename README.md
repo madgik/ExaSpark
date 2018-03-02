@@ -72,6 +72,8 @@ Settings A POST request is used to perform the functionality
 
 Visualization and interactaction with the API’s resources
 
+![screenshot from 2018-03-02 17-42-42](https://user-images.githubusercontent.com/31855993/36907759-14d38c96-1e42-11e8-8995-c14c0353ee56.png)
+
 
 **Endpoints**
 

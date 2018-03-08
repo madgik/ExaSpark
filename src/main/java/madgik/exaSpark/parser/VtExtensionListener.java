@@ -105,7 +105,8 @@ public class VtExtensionListener extends SqlBaseBaseListener{
 		
 		try {
 			
-			ClassLoader classLoader = VtExtensionListener.class.getClassLoader();
+//			ClassLoader classLoader = VtExtensionListener.class.getClassLoader();
+			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 			Class<?> cls = classLoader.loadClass(clName);
 			//----------------------------------------------------
 			Class<?> sparkParam[] = {SparkSession.class};

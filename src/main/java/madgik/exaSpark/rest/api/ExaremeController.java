@@ -25,7 +25,7 @@ import madgik.exaSpark.rest.api.entities.QueryResponse;
 @RestController
 public class ExaremeController {
 	
-	 @PostMapping(value="query")
+	 @PostMapping(value="query", produces="application/json")
 	 public QueryResponse query(@RequestParam("query") String param) {
 		 
 		 QueryResponse qR = new QueryResponse();
@@ -65,7 +65,7 @@ public class ExaremeController {
 		
     }
 	 
-	 @PostMapping(value="query", produces="text/csv")
+	 @PostMapping(value="query2", produces="text/csv")
 	 @ResponseBody
 	 public ResponseEntity<String> query2(@RequestParam("query") String param, HttpServletResponse response) throws IOException {
 		

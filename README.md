@@ -80,10 +80,6 @@ Visualization and interactaction with the API’s resources
 - http://<ip>:9090/query/ : to perform a query
 - http://<ip>:9090/swagger-ui.html : to visualize the API's resources
 
-### Upcoming features
-
-- Dockerize the application
-
 # ExaSpark with Docker
 
 ## Docker Installation

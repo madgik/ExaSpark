@@ -105,8 +105,13 @@ public class VtParser {
 			{
 				capitalizedQuery = capitalizedQuery.replace(entry.getKey(), entry.getValue());
 			}
+			
+//			return spark.sql(capitalizedQuery).toDF();
 			LogicalPlan lgk = spark.sessionState().sqlParser().parsePlan(capitalizedQuery);
 			QueryExecution qe = spark.sessionState().executePlan(lgk);
+			
+			spark.sessionState().optimizer();
+			
 			qe.assertAnalyzed();
 			
 			return Dataset.ofRows(spark, lgk);

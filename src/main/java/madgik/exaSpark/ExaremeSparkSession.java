@@ -1,6 +1,7 @@
 package madgik.exaSpark;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +18,12 @@ import com.google.common.reflect.ClassPath;
 
 import madgik.exaSpark.parser.ParserUtils;
 import madgik.exaSpark.parser.exception.VtExtensionParserException;
+import madgik.exaSpark.udf.UdfManager;
 
-public class ExaremeSparkSession {
+public class ExaremeSparkSession implements Serializable{
 
+	private static final long serialVersionUID = -7768200339918931349L;
+	
 	private SparkSession spark;
 	
 	public ExaremeSparkSession(SparkSession spark) {
@@ -127,6 +131,11 @@ public class ExaremeSparkSession {
 		public synchronized ExaremeSparkSession getOrCreateExareme() {
 
 			ExaremeSparkSession exare = new ExaremeSparkSession(super.getOrCreate());
+			
+			UdfManager udfManager = new UdfManager(exare);
+			
+			exare.getSparkSession().udf().register("jmerge", udfManager.jmerge, DataTypes.StringType);
+			exare.getSparkSession().udf().register("jmergeregexp", udfManager.jmergeregexp, DataTypes.StringType);
 			
 			return exare;
 		}
